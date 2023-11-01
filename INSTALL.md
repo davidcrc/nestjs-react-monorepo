@@ -120,3 +120,27 @@ npm install --save @nestjs/serve-static --workspace api
 ```
 
 - run: npm run build
+
+<!--  -->
+
+# Add Tailwind
+
+- https://tailwindcss.com/docs/guides/vite
+
+```bash
+npm install --save-dev tailwindcss postcss autoprefixer --workspace client
+```
+
+```bash
+cd apps/client && npx tailwindcss init -p && cd ../..
+```
+
+```bash
+npm add --save-dev sass --workspace client
+```
+
+- rename App.css to App.scss, then copy @tailwind there
+
+- remove Index.css and his imports
+
+- Import App.scss en App.tsx
