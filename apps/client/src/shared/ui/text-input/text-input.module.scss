@@ -1,0 +1,59 @@
+.Root {
+  @apply relative h-[4rem] lg:h-min;
+}
+
+.Wrapper {
+  &--showErrorPlaceholder {
+    @apply pb-[1.15rem];
+  }
+}
+
+.Label {
+  @apply text-gray-500 font-sans text-sm font-normal leading-4 transition-all;
+
+  &--error {
+    @apply text-red-800;
+  }
+}
+
+.Required {
+  @apply text-gray-500 -ml-[0.2rem] whitespace-nowrap font-bold;
+
+  &--floating {
+    @apply text-red-800;
+  }
+
+  &--error {
+    @apply text-red-800 -ml-[0.2rem];
+  }
+}
+
+.Input {
+  @apply bg-white px-2 h-8 rounded-md border-b  border-solid  border-gray-300 p-0 font-sans text-base leading-4 text-black lg:text-sm;
+
+  &::placeholder {
+    @apply text-sm text-transparent;
+  }
+
+  &--floating {
+    &::placeholder {
+      @apply text-gray-500 pl-[0.1875rem];
+    }
+  }
+
+  &[data-error="true"] {
+    @apply border-b-red-800;
+  }
+
+  &--readOnly {
+    @apply text-gray-500 pointer-events-none;
+  }
+}
+
+.Description {
+  @apply font-sans text-xs leading-[0.875rem] text-[#6F7780];
+}
+
+.Error {
+  @apply text-red-800 mt-[0.25rem];
+}

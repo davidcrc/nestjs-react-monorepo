@@ -144,3 +144,56 @@ npm add --save-dev sass --workspace client
 - remove Index.css and his imports
 
 - Import App.scss en App.tsx
+
+<!--  -->
+
+# Add Mantine
+
+```bash
+npm install @mantine/core @mantine/hooks @mantine/notifications --workspace client
+```
+
+```bash
+npm install --save-dev postcss postcss-preset-mantine postcss-simple-vars  --workspace client
+```
+
+- update postcss.config.js
+
+```js
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+    "postcss-preset-mantine": {},
+    "postcss-simple-vars": {
+      variables: {
+        "mantine-breakpoint-xs": "36em",
+        "mantine-breakpoint-sm": "48em",
+        "mantine-breakpoint-md": "62em",
+        "mantine-breakpoint-lg": "75em",
+        "mantine-breakpoint-xl": "88em",
+      },
+    },
+  },
+};
+```
+
+- add to main.tsx
+
+```tsx
+<MantineProvider>
+  <Notifications>
+    <App />
+  </Notifications>
+</MantineProvider>
+```
+
+<!--  -->
+
+# Add react-router-dom
+
+- check : https://github.com/mantinedev/vite-template
+
+```bash
+npm i react-router-dom --workspace client
+```
